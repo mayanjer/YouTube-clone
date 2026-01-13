@@ -1,16 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import TitleBar from "./components/TitleBar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (<>
-  <h2>Hello World</h2>
-  </>)
+  return <div className="mt-5 ml-5">
+  <TitleBar/>
+  </div>;
 }
-    
 
-
-export default App
+export default App;
