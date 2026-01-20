@@ -4,12 +4,12 @@ import youtubeLogo from '../assets/youtube-logo.svg'
 
 
 export default function TitleBar() {
-    return <span className="flex">
+    return <span className="flex gap-2">
         <img
             src={menuLogo}
             alt=" "
-            className="w-10 h-5 border" />
+            className="w-10 h-5" />
         <img src={youtubeLogo} alt=""
-        className="w-25 border"/>
+        className="w-25"/>
     </span>
 }
