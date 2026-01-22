@@ -1,20 +1,23 @@
-import menuLogo from "../assets/menu-symbol.svg";
 import youtubeLogo from "../assets/youtube-logo.svg";
 import { Mic, Bell, Menu, UserPen, Plus } from "lucide-react";
 
 export default function TitleBar() {
   return (
-    <span className="flex gap-2">
-      <Menu className="mt-2" />
-      <img src={youtubeLogo} alt="" className="w-25" />
+    <section className="flex ml-5 ">
+      <span className="flex gap-6">
+        <button className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center">
+          <Menu />
+        </button>
+        <img src={youtubeLogo} alt="" className="w-20 md:w-20 lg:w-25" />
+      </span>
       <span className="flex gap-3 mx-auto">
         <input
           type="text"
-          className="border w-100 h-10  rounded-2xl px-4"
+          className="border lg:w-100 lg:h-10 rounded-2xl px-4 md:w-80 w-15"
           placeholder="Search"
         />
         <span className="bg-gray-100 hover:bg-gray-300 rounded-full w-10 flex justify-center items-center h-10">
-          <Mic/>
+          <Mic />
         </span>
       </span>
       <span className="flex gap-5">
@@ -26,11 +29,9 @@ export default function TitleBar() {
           <Bell />
         </span>
         <div className="border rounded-full w-10 h-10 flex justify-center items-center">
-        
-            <UserPen />
-         
+          <UserPen />
         </div>
       </span>
-    </span>
+    </section>
   );
 }
