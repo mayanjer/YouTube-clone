@@ -13,20 +13,22 @@ export default function TitleBar() {
           className="border w-100 h-10  rounded-2xl px-4"
           placeholder="Search"
         />
-        <span className="bg-gray-100 hover:bg-gray-200 rounded-full w-10 flex justify-center">
-          <Mic className="mt-2" />
+        <span className="bg-gray-100 hover:bg-gray-300 rounded-full w-10 flex justify-center items-center h-10">
+          <Mic/>
         </span>
       </span>
       <span className="flex gap-5">
-        <button className="bg-gray-100 font-bold p-2 flex gap-2 rounded-2xl hover:bg-gray-200">
+        <button className="bg-gray-100 font-bold p-2 flex gap-2 rounded-2xl hover:bg-gray-300">
           <Plus />
           Create
         </button>
-        <Bell className="mt-2 rounded-full  hover:bg-gray-200" />
-        <div className="border rounded-full w-10 flex justify-center">
-          <div className="flex flex-col justify-center">
+        <span className="rounded-full hover:bg-gray-300 w-10 h-10 flex justify-center items-center">
+          <Bell />
+        </span>
+        <div className="border rounded-full w-10 h-10 flex justify-center items-center">
+        
             <UserPen />
-          </div>
+         
         </div>
       </span>
     </span>
