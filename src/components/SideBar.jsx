@@ -69,27 +69,28 @@ export default function SideBar() {
       <hr className="w-55 border-gray-300 mt-5 -ml-6" />
 
       {/* You */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col">
         <h5 className="flex gap-4 hover:bg-gray-300 rounded-xl h-10 items-center px-1 mt-2">
           <span className="font-bold">You</span>
           {">"}
         </h5>
-        <p className="flex gap-8">
+        <p className="flex gap-8 hover:bg-gray-300 h-10 items-center rounded-xl p-1">
           <History /> History
         </p>
-        <p className="flex gap-8">
+        <p className="flex gap-8 hover:bg-gray-300 h-10 items-center rounded-xl p-1">
           <ListMusic /> Play Lists
         </p>
-        <p className="flex gap-8">
+        <p className="flex gap-8 hover:bg-gray-300 h-10 items-center rounded-xl p-1">
           <Clock /> Watch Later
         </p>
-        <p className="flex gap-8">
+        <p className="flex gap-8 hover:bg-gray-300 h-10 items-center rounded-xl p-1">
           <ThumbsUp /> Liked Videos
         </p>
-        <p className="flex gap-8">
+        <p className="flex gap-8 hover:bg-gray-300 h-10 items-center rounded-xl p-1">
           <Youtube /> Your Videos
         </p>
       </div>
+      <hr className="w-55 border-gray-300 mt-5 -ml-6" />
 
       {/* explore */}
     </section>
