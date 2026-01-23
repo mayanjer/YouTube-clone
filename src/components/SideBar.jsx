@@ -9,7 +9,8 @@ import {
   ThumbsUp,
   Music2,
   TvMinimalPlay,
-  Gamepad2
+  Gamepad2,
+  Settings
 } from "lucide-react";
 import { SUBSCRIPTIONS } from "../data";
 
@@ -96,29 +97,37 @@ export default function SideBar() {
       <hr className="w-55 border-gray-300 mt-5 -ml-6" />
 
       {/* explore */}
-      <div className="flex flex-col gap-3">
-        <h5 className="flex gap-3 border h-10 items-center rounded-xl p-1 hover:bg-gray-300">
-          <span className="font-bold">Explore</span>
-          {" >"}
-        </h5>
-        <p className="flex gap-8">
+      <div className="flex flex-col mt-2">
+        <h5 className="flex gap-3  h-10 items-center font-bold">Explore</h5>
+        <p className="flex gap-8 h-10 items-center rounded-xl p-1 hover:bg-gray-300">
           <span>
             <Music2 />
           </span>
           Music
         </p>
-        <p className="flex gap-8">
+        <p className="flex gap-8 h-10 items-center rounded-xl p-1 hover:bg-gray-300">
           <span>
             <TvMinimalPlay />
           </span>
           Movies
         </p>
-        <p className="flex gap-8">
+        <p className="flex gap-8 h-10 items-center rounded-xl p-1 hover:bg-gray-300">
           <span>
             <Gamepad2 />
           </span>
           Gaming
         </p>
+      </div>
+
+      <hr className="w-55 border-gray-300 mt-5 -ml-6" />
+
+      {/* Settings */}
+      <div className="mt-2 flex flex-col gap-2">
+        <p className="flex gap-8"><Settings/>Settings</p>
+        <p>Report history</p>
+        <p>Help</p>
+        <p>Send feedback</p>
+        <hr className="w-55 border-gray-300 mt-5 -ml-6" />
       </div>
     </section>
   );
