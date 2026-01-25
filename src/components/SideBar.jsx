@@ -10,35 +10,50 @@ import {
   Music2,
   TvMinimalPlay,
   Gamepad2,
-  Settings
+  Settings,
+  Flag,
+  BadgeQuestionMark,
+  MessageCircleReply,
+  Menu,
 } from "lucide-react";
 import { SUBSCRIPTIONS } from "../data";
+import { useState } from "react";
+import youtubeLogo from "../assets/youtube-logo.svg";
 
 export default function SideBar() {
   // simple sidebar rendered initially
   const simpleSideBar = (
-    <section className="mt-4">
-      <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
-        <House />
-        Home
+    <section className="mt-4 border w-55 flex flex-col">
+      <span className="flex gap-6">
+        <img src={youtubeLogo} alt="" className="w-20 md:w-20 lg:w-25" />
       </span>
+      <div className="w-20 flex flex-col items-center">
+        <button className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center border">
+          <Menu />
+        </button>
 
-      <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
-        <Clapperboard />
-        Shorts
-      </span>
+        <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2 border">
+          <House />
+          Home
+        </span>
 
-      <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
-        <Youtube />
-        Subscriptions
-      </span>
+        <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
+          <Clapperboard />
+          Shorts
+        </span>
 
-      <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
-        <div className="border rounded-full">
-          <UserPen />
-        </div>
-        You
-      </span>
+        <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
+          <Youtube />
+          Subscriptions
+        </span>
+
+        <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
+          <div className="border rounded-full">
+            <UserPen />
+          </div>
+          You
+        </span>
+      </div>
     </section>
   );
 
@@ -122,15 +137,27 @@ export default function SideBar() {
       <hr className="w-55 border-gray-300 mt-5 -ml-6" />
 
       {/* Settings */}
-      <div className="mt-2 flex flex-col gap-2">
-        <p className="flex gap-8"><Settings/>Settings</p>
-        <p>Report history</p>
-        <p>Help</p>
-        <p>Send feedback</p>
-        <hr className="w-55 border-gray-300 mt-5 -ml-6" />
+      <div className="mt-2 flex flex-col">
+        <p className="flex gap-8 h-10 items-center rounded-xl hover:bg-gray-300 p-1">
+          <Settings />
+          Settings
+        </p>
+        <p className="flex gap-8 h-10 items-center rounded-xl hover:bg-gray-300 p-1">
+          <Flag />
+          Report history
+        </p>
+        <p className="flex gap-8 h-10 items-center rounded-xl hover:bg-gray-300 p-1">
+          <BadgeQuestionMark />
+          Help
+        </p>
+        <p className="flex gap-8 h-10 items-center rounded-xl hover:bg-gray-300 p-1">
+          <MessageCircleReply />
+          Send feedback
+        </p>
       </div>
     </section>
   );
+  const [sideBar, setSideBar] = useState(simpleSideBar);
 
-  return detailedSideBar;
+  return sideBar;
 }

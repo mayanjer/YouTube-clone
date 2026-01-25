@@ -1,15 +1,10 @@
-import youtubeLogo from "../assets/youtube-logo.svg";
+
 import { Mic, Bell, Menu, UserPen, Plus } from "lucide-react";
 
 export default function TitleBar() {
   return (
     <section className="flex ml-5 ">
-      <span className="flex gap-6">
-        <button className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center">
-          <Menu />
-        </button>
-        <img src={youtubeLogo} alt="" className="w-20 md:w-20 lg:w-25" />
-      </span>
+      
       <span className="flex gap-3 mx-auto">
         <input
           type="text"
