@@ -23,16 +23,13 @@ import youtubeLogo from "../assets/youtube-logo.svg";
 export default function SideBar() {
   // simple sidebar rendered initially
   const simpleSideBar = (
-    <section className="mt-4 border w-55 flex flex-col">
-      <span className="flex gap-6">
-        <img src={youtubeLogo} alt="" className="w-20 md:w-20 lg:w-25" />
-      </span>
-      <div className="w-20 flex flex-col items-center">
-        <button className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center border">
+    <section className="w-55 grid grid-cols-3">
+      <div className="w-20 flex flex-col items-center col-start-1">
+        <button onClick= { toggleSideBar } className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center ">
           <Menu />
         </button>
 
-        <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2 border">
+        <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2 ">
           <House />
           Home
         </span>
@@ -54,6 +51,11 @@ export default function SideBar() {
           You
         </span>
       </div>
+      <img
+        src={youtubeLogo}
+        alt=""
+        className="w-20 md:w-20 lg:w-25 col-span-2 col-start-2 mt-2 ml-3"
+      />
     </section>
   );
 
@@ -158,6 +160,9 @@ export default function SideBar() {
     </section>
   );
   const [sideBar, setSideBar] = useState(simpleSideBar);
+  function toggleSideBar() {
+    setSideBar(detailedSideBar)
+  }
 
   return sideBar;
 }
