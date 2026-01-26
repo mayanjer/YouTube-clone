@@ -23,7 +23,7 @@ import youtubeLogo from "../assets/youtube-logo.svg";
 export default function SideBar() {
   // simple sidebar rendered initially
   const simpleSideBar = (
-    <section className="w-55 grid grid-cols-3">
+    <section className="w-55 grid grid-cols-3" id="simple-side-bar">
       <div className="w-20 flex flex-col items-center col-start-1">
         <button
           onClick={toggleSimpleSideBar}
@@ -64,7 +64,7 @@ export default function SideBar() {
 
   // detailed sidebar rendered on click of the menu icon
   const detailedSideBar = (
-    <section className="ml-6 flex flex-col w-55 text-sm">
+    <section className="ml-6 flex flex-col w-55 text-sm" id="detailed-side-bar">
       <div className="flex gap-5">
 
         <button
@@ -96,7 +96,7 @@ export default function SideBar() {
       </h5>
       <div>
         {SUBSCRIPTIONS.map(({ name, imageSource }) => (
-          <p className="flex gap-8 items-center hover:bg-gray-300 h-10 rounded-xl">
+          <p className="flex gap-8 items-center hover:bg-gray-300 h-10 rounded-xl" key={imageSource}>
             <span className="rounded-full h-7 w-7 overflow-hidden">
               <img src={imageSource} className="h-full w-full" />
             </span>
@@ -186,6 +186,11 @@ export default function SideBar() {
   function toggleDetailedSideBar() {
     setSideBar(simpleSideBar)
   }
+
+  if (sideBar === detailedSideBar) {
+    console.log(detailedSideBar)
+  }
+
 
   return sideBar;
 }
