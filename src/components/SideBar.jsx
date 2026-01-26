@@ -25,7 +25,10 @@ export default function SideBar() {
   const simpleSideBar = (
     <section className="w-55 grid grid-cols-3">
       <div className="w-20 flex flex-col items-center col-start-1">
-        <button onClick= { toggleSideBar } className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center ">
+        <button
+          onClick={toggleSimpleSideBar}
+          className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center "
+        >
           <Menu />
         </button>
 
@@ -61,7 +64,21 @@ export default function SideBar() {
 
   // detailed sidebar rendered on click of the menu icon
   const detailedSideBar = (
-    <section className="ml-6 mt-4 flex flex-col w-55 text-sm">
+    <section className="ml-6 flex flex-col w-55 text-sm">
+      <div className="flex gap-5">
+
+        <button
+          onClick={toggleDetailedSideBar}
+          className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center "
+        >
+          <Menu />
+        </button>
+        <img
+          src={youtubeLogo}
+          alt=""
+          className="w-20 md:w-20 lg:w-25 col-span-2 col-start-2  "
+        />
+      </div>
       <span className="flex gap-8 w-45 h-10  items-center hover:bg-gray-300 rounded-xl px-1">
         <House />
         Home
@@ -159,9 +176,15 @@ export default function SideBar() {
       </div>
     </section>
   );
+
   const [sideBar, setSideBar] = useState(simpleSideBar);
-  function toggleSideBar() {
+
+  function toggleSimpleSideBar() {
     setSideBar(detailedSideBar)
+  }
+
+  function toggleDetailedSideBar() {
+    setSideBar(simpleSideBar)
   }
 
   return sideBar;
