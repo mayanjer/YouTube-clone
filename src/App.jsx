@@ -4,14 +4,17 @@ import MainContent from "./components/MainContent";
 
 function App() {
   return (
-    <div className="mt-2 mr-5 grid grid-cols-[245px_1fr] grid-rows-[auto_1fr] h-screen">
+    <div className="mt-2 mr-5 grid grid-cols-[300px_1fr] grid-rows-[auto_1fr] h-screen">
       <div className="row-span-2 col-start-1">
-        <SideBar />
+
+      <SideBar />
       </div>
-
-      <TitleBar />
-
-      <MainContent />
+      <div className="col-span-2 row-start-1 flex  border">
+        <TitleBar /> 
+      </div>
+     
+        <MainContent />
+      
     </div>
   );
 }
