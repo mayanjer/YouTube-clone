@@ -187,10 +187,6 @@ export default function SideBar() {
     setSideBar(simpleSideBar)
   }
 
-  if (sideBar === detailedSideBar) {
-    console.log(detailedSideBar)
-  }
-
 
   return sideBar;
 }
