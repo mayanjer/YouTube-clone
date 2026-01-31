@@ -8,3 +8,5 @@ export const SUBSCRIPTIONS = [
     { name: "Kibirige Mayanja", imageSource: dp_2 },
     {name:"Kasule Mahad", imageSource:dp_3}
 ]
+
+export const BUTTON_IDENTIFIERS = ["All", "Gaming", "Podcasts", "Checkmates"]
