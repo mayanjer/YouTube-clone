@@ -23,7 +23,7 @@ import youtubeLogo from "../assets/youtube-logo.svg";
 export default function SideBar() {
   // simple sidebar rendered initially
   const simpleSideBar = (
-    <section className="w-55 grid grid-cols-3" id="simple-side-bar">
+    <section className="w-61 grid grid-cols-3" id="simple-side-bar">
       <div className="w-20 flex flex-col items-center col-start-1">
         <button
           onClick={toggleSimpleSideBar}

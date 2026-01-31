@@ -5,16 +5,14 @@ import MainContent from "./components/MainContent";
 function App() {
   return (
     <div className="mt-2 mr-5 flex">
-      <div className = "flex flex-col gap-4">
-
-      <SideBar />
+      <div className="flex flex-col gap-4 border">
+        <SideBar />
       </div>
-      <div className="flex-1 flex-col gap-41">
+      <div className="flex-1 flex-col gap-4 border">
         <TitleBar />
-      </div>
-      <div className="flex">
         <MainContent />
       </div>
+     
     </div>
   );
 }
