@@ -9,7 +9,7 @@ function App() {
 
       <SideBar />
       </div>
-      <div className="flex-1 flex-col gap-4">
+      <div className="flex-1 flex-col gap-41">
         <TitleBar />
       </div>
       <div className="flex">
