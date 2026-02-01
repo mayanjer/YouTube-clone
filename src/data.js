@@ -4,8 +4,14 @@ import dp_2 from "./assets/profile-photos/profile2.jpeg";
 import dp_3 from "./assets/profile-photos/profile3.jpeg";
 
 // main content photos
-import image_1 from "./assets/front-pics/pic_1.jpeg";
+import image_1 from "./assets/front-pics/pic1.jpeg";
 import image_2 from "./assets/front-pics/pic2.jpeg";
+import image_3 from "./assets/front-pics/pic3.jpeg";
+import image_4 from "./assets/front-pics/pic4.jpeg";
+import image_5 from "./assets/front-pics/pic5.jpeg";
+import image_6 from "./assets/front-pics/pic6.jpeg";
+import image_7 from "./assets/front-pics/pic7.jpeg";
+import image_8 from "./assets/front-pics/pic8.jpeg";
 
 export const SUBSCRIPTIONS = [
   { name: "Mayanja Muhammad", imageSource: dp_1 },
@@ -27,7 +33,6 @@ export const BUTTON_IDENTIFIERS = [
 
 export const IMAGES = [
   { image: image_1, heading: "Hello, World" },
-  { image: image_2, heading: "My name is Mayanja" },
   { image: image_2, heading: "My name is Mayanja" },
   { image: image_2, heading: "My name is Mayanja" },
   { image: image_2, heading: "My name is Mayanja" },
