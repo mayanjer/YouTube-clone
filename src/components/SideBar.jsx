@@ -25,6 +25,10 @@ export default function SideBar() {
   const simpleSideBar = (
     <section className="w-61 grid grid-cols-3" id="simple-side-bar">
       <div className="w-20 flex flex-col items-center col-start-1">
+
+        {/* return the button and menu here in case of issues */}
+
+        {/* here in between */}
         <button
           onClick={toggleSimpleSideBar}
           className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center "
@@ -54,6 +58,10 @@ export default function SideBar() {
           You
         </span>
       </div>
+
+      {/* return the button and menu here in case of issues */}
+
+        {/* here in between */}
       <img
         src={youtubeLogo}
         alt=""
