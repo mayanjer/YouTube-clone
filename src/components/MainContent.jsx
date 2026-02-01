@@ -9,8 +9,8 @@ export default function MainContent() {
             {BUTTON_IDENTIFIERS.map((identifier)=> <Button identifier={identifier} />)}
         </div>
 
-        <div className="flex flex-wrap gap-3">
-            {IMAGES.map((postDetails)=> <Post/>)}
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2  gap-3">
+            {IMAGES.map(({image, heading}) => <Post image ={image} heading = {heading} />)}
         </div>
     </section>
 }
