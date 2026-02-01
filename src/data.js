@@ -29,4 +29,8 @@ export const IMAGES = [
   { image: image_1, heading: "Hello, World" },
   { image: image_2, heading: "My name is Mayanja" },
   { image: image_2, heading: "My name is Mayanja" },
+  { image: image_2, heading: "My name is Mayanja" },
+  { image: image_2, heading: "My name is Mayanja" },
+  { image: image_2, heading: "My name is Mayanja" },
+  { image: image_2, heading: "My name is Mayanja" },
 ];
