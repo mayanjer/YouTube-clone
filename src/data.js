@@ -33,8 +33,8 @@ export const BUTTON_IDENTIFIERS = [
   "Premier League",
 ];
 
-export const IMAGES = [
-  { image: image_1, heading: "Hello, World" },
+export const POST = [
+  { thumbNail: image_1, heading: "Andrew Tate taken to prison for Human Trafficing", profilePicture: dp_1, accountName: "Andrew Tate", viewCount:"50k", timePosted:"4 years ago" },
   { image: image_2, heading: "My name is Mayanja" },
   { image: image_3, heading: "My name is Mayanja" },
   { image: image_4, heading: "My name is Mayanja" },
