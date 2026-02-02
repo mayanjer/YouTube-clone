@@ -7,23 +7,26 @@ export default function Post({
   timePosted,
 }) {
   return (
-    <div className="rounded-2xl min-w-60 min-h-90">
+    <div className="rounded-2xl min-w-60 min-h-90 hover:bg-gray-100 transform transition duration-250 ease-out hover:scale-102">
       <div
         className="rounded-2xl h-70 overflow-hidden hover:bg-gray-200 hover:min-w-62 flex justify-center
-      transform transition duration-250 ease-out hover:scale-102
+      
       "
       >
         <img src={thumbNail} alt="" className=" h-screen w-full" />
       </div>
 
-      <p className="flex gap-2 mt-3 font-bold">
+      <p className="flex items-center gap-2 mt-3 font-bold">
         <div className="h-10 w-10 rounded-full overflow-hidden ">
           <img src={profilePicture} alt="" className="h-full w-full" />
         </div>
         {heading}
       </p>
-      <p className="ml-11">{accountName}</p>
-      <p className="ml-11">{viewCount} . { timePosted }</p>
+
+      <p className="ml-12">{accountName}</p>
+      <p className="ml-12">
+        {viewCount} . {timePosted}
+      </p>
     </div>
   );
 }

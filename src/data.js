@@ -31,6 +31,16 @@ export const BUTTON_IDENTIFIERS = [
   "Calisthenics",
   "AI",
   "Premier League",
+  "Live",
+  "Pop Music",
+  "Information",
+  "Lectures",
+  "Recently uploaded",
+  "Next to you",
+  "Kicks",
+  "Tracks"
+
+
 ];
 
 export const POST = [

@@ -8,7 +8,7 @@ export default function TitleBar() {
       <span className="flex gap-3 mx-auto">
         <input
           type="text"
-          className="border lg:w-100 lg:h-10 rounded-2xl px-4 md:w-80 w-15"
+          className="border lg:w-100 lg:h-10 rounded-full px-4 md:w-80 w-15"
           placeholder="Search"
         />
         <span className="bg-gray-100 hover:bg-gray-300 rounded-full w-10 flex justify-center items-center h-10">

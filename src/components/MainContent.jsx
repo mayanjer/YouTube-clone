@@ -12,27 +12,25 @@ export default function MainContent() {
         ))}
       </div>
 
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2  gap-3">
-        {POST.map(
-          ({
-            thumbNail,
-            heading,
-            profilePicture,
-            accountName,
-            viewCount,
-            timePosted,
-          }) => (
-            <Post
-              thumbNail={thumbNail}
-              heading={heading}
-              profilePicture={profilePicture}
-              accountName={accountName}
-              viewCount={viewCount}
-              timePosted={timePosted}
-            />
-          ),
-        )}
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-3">
+        {POST.map((postObj) => (
+          <Post {...postObj} />
+        ))}
       </div>
     </section>
   );
 }
+
+// thumbNail,
+// heading,
+//profilePicture,
+// accountName,
+// viewCount,
+// timePosted,
+
+// thumbNail = { thumbNail };
+// heading = { heading };
+// profilePicture = { profilePicture };
+// accountName = { accountName };
+// viewCount = { viewCount };
+// timePosted = { timePosted };
