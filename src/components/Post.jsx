@@ -15,7 +15,15 @@ export default function Post({
       >
         <img src={thumbNail} alt="" className=" h-screen w-full" />
       </div>
-      <p>{heading}</p>
+
+      <p className="flex gap-2 mt-3 font-bold">
+        <div className="border h-10 w-10 rounded-full overflow-hidden ">
+          <img src={profilePicture} alt="" className="h-full w-full" />
+        </div>
+        {heading}
+      </p>
+      <p className="ml-11">{accountName}</p>
+      <p className="ml-11">{viewCount} . { timePosted }</p>
     </div>
   );
 }
