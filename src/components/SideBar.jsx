@@ -15,6 +15,8 @@ import {
   BadgeQuestionMark,
   MessageCircleReply,
   Menu,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { SUBSCRIPTIONS } from "../data";
 import { useState } from "react";
@@ -25,7 +27,6 @@ export default function SideBar() {
   const simpleSideBar = (
     <section className="w-61 grid grid-cols-3" id="simple-side-bar">
       <div className="w-20 flex flex-col items-center col-start-1">
-
         {/* return the button and menu here in case of issues */}
 
         {/* here in between */}
@@ -61,7 +62,7 @@ export default function SideBar() {
 
       {/* return the button and menu here in case of issues */}
 
-        {/* here in between */}
+      {/* here in between */}
       <img
         src={youtubeLogo}
         alt=""
@@ -71,10 +72,13 @@ export default function SideBar() {
   );
 
   // detailed sidebar rendered on click of the menu icon
+
+  const [visible, setVisible] = useState(3);
+  const visibleSubscribers = SUBSCRIPTIONS.slice(0, visible);
+
   const detailedSideBar = (
     <section className="ml-6 flex flex-col w-55 text-sm" id="detailed-side-bar">
       <div className="flex gap-5">
-
         <button
           onClick={toggleDetailedSideBar}
           className="hover:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center "
@@ -103,14 +107,39 @@ export default function SideBar() {
         {">"}
       </h5>
       <div>
-        {SUBSCRIPTIONS.map(({ name, imageSource }) => (
-          <p className="flex gap-8 items-center hover:bg-gray-300 h-10 rounded-xl" key={imageSource}>
+        {visibleSubscribers.map(({ name, imageSource }) => (
+          <p
+            className="flex gap-8 items-center hover:bg-gray-300 h-10 rounded-xl"
+            key={imageSource}
+          >
             <span className="rounded-full h-7 w-7 overflow-hidden">
               <img src={imageSource} className="h-full w-full" />
             </span>
             {name}
           </p>
         ))}
+
+        {visible < SUBSCRIPTIONS.length ? (
+          <div className="hover:bg-gray-300 rounded-xl">
+            <button
+              onClick={() => setVisible(SUBSCRIPTIONS.length)}
+              className="flex gap-8   h-10 items-center px-1 mt-2"
+            >
+              <ChevronDown />
+              Show more
+            </button>
+          </div>
+        ) : (
+          <div className="hover:bg-gray-300 rounded-xl">
+            <button
+              onClick={() => setVisible(3)}
+              className="flex gap-8   h-10 items-center px-1 mt-2"
+            >
+              <ChevronUp />
+              Show less
+            </button>
+          </div>
+        )}
       </div>
       <hr className="w-55 border-gray-300 mt-5 -ml-6" />
 
@@ -184,17 +213,15 @@ export default function SideBar() {
       </div>
     </section>
   );
-
   const [sideBar, setSideBar] = useState(simpleSideBar);
 
   function toggleSimpleSideBar() {
-    setSideBar(detailedSideBar)
+    setSideBar(detailedSideBar);
   }
 
   function toggleDetailedSideBar() {
-    setSideBar(simpleSideBar)
+    setSideBar(simpleSideBar);
   }
 
-
-  return sideBar;
+  return detailedSideBar;
 }

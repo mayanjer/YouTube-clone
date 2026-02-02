@@ -19,6 +19,10 @@ export const SUBSCRIPTIONS = [
   { name: "Mayanja Muhammad", imageSource: dp_1 },
   { name: "Kibirige Mayanja", imageSource: dp_2 },
   { name: "Kasule Mahad", imageSource: dp_3 },
+  { name: "Kasule Mahad", imageSource: dp_3 },
+  { name: "Kasule Mahad", imageSource: dp_3 },
+  { name: "Kasule Mahad", imageSource: dp_3 },
+  { name: "Kasule Mahad", imageSource: dp_3 },
 ];
 
 export const BUTTON_IDENTIFIERS = [

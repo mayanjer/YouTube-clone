@@ -3,7 +3,7 @@ import { Mic, Bell, Menu, UserPen, Plus } from "lucide-react";
 
 export default function TitleBar() {
   return (
-    <section className="flex ml-5 ">
+    <section className="flex flex-row ml-5">
       
       <span className="flex gap-3 mx-auto">
         <input
