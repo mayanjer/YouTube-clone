@@ -16,13 +16,13 @@ import image_9 from "./assets/front-pics/pic9.jpeg";
 import image_10 from "./assets/front-pics/pic10.jpeg";
 
 export const SUBSCRIPTIONS = [
-  { name: "Mayanja Muhammad", imageSource: dp_1 },
-  { name: "Kibirige Mayanja", imageSource: dp_2 },
-  { name: "Kasule Mahad", imageSource: dp_3 },
-  { name: "Kasule Mahad", imageSource: dp_3 },
-  { name: "Kasule Mahad", imageSource: dp_3 },
-  { name: "Kasule Mahad", imageSource: dp_3 },
-  { name: "Kasule Mahad", imageSource: dp_3 },
+  { name: "Mayanja Muhammad", imageSource: dp_1, id: 1 },
+  { name: "Kibirige Mayanja", imageSource: dp_2, id: 2 },
+  { name: "Kasule Mahad", imageSource: dp_3, id: 3 },
+  { name: "Kasule Mahad", imageSource: dp_3, id: 4 },
+  { name: "Kasule Mahad", imageSource: dp_3, id: 5 },
+  { name: "Kasule Mahad", imageSource: dp_3, id: 6 },
+  { name: "Kasule Mahad", imageSource: dp_3, id: 7 },
 ];
 
 export const BUTTON_IDENTIFIERS = [

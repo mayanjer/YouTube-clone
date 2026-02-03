@@ -8,13 +8,13 @@ export default function MainContent() {
     <section className="mt-4">
       <div className="flex gap-2">
         {BUTTON_IDENTIFIERS.map((identifier) => (
-          <Button identifier={identifier} />
+            <Button identifier={identifier} key={identifier } />
         ))}
       </div>
 
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-3">
         {POST.map((postObj) => (
-          <Post {...postObj} />
+          <Post {...postObj}/>
         ))}
       </div>
     </section>

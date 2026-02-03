@@ -107,10 +107,10 @@ export default function SideBar() {
         {">"}
       </h5>
       <div>
-        {visibleSubscribers.map(({ name, imageSource }) => (
+        {visibleSubscribers.map(({ name, imageSource, id }) => (
           <p
             className="flex gap-8 items-center hover:bg-gray-300 h-10 rounded-xl"
-            key={imageSource}
+            key={id}
           >
             <span className="rounded-full h-7 w-7 overflow-hidden">
               <img src={imageSource} className="h-full w-full" />
@@ -123,7 +123,7 @@ export default function SideBar() {
           <div className="hover:bg-gray-300 rounded-xl">
             <button
               onClick={() => setVisible(SUBSCRIPTIONS.length)}
-              className="flex gap-8   h-10 items-center px-1 mt-2"
+              className="flex gap-8 h-10 items-center px-1 mt-2"
             >
               <ChevronDown />
               Show more
@@ -223,5 +223,5 @@ export default function SideBar() {
     setSideBar(simpleSideBar);
   }
 
-  return detailedSideBar;
+  return sideBar;
 }
