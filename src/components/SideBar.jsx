@@ -39,7 +39,7 @@ export default function SideBar() {
         </button>
 
         <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2 ">
-          <House className="`{$isActive ? }`" />
+          <House className="{`${!isActive ? fill-content} `}" />
           Home
         </span>
 
