@@ -23,6 +23,7 @@ import { useState } from "react";
 import youtubeLogo from "../assets/youtube-logo.svg";
 
 export default function SideBar() {
+  const [isActive, setIsActive] = useState(false)
   // simple sidebar rendered initially
   const simpleSideBar = (
     <section className="w-61 grid grid-cols-3" id="simple-side-bar">
@@ -38,7 +39,7 @@ export default function SideBar() {
         </button>
 
         <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2 ">
-          <House />
+          <House className="`{$isActive ? }`" />
           Home
         </span>
 
