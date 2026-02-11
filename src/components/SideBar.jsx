@@ -54,7 +54,7 @@ export default function SideBar() {
         </span>
 
         <span className="text-xs flex flex-col w-20 justify-center items-center hover:bg-gray-300 rounded p-2">
-          <div className="border rounded-full">
+          <div className="border rounded-full ">
             <UserPen />
           </div>
           You
